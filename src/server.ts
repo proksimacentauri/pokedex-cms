@@ -1,5 +1,6 @@
 import express from 'express';
 import payload from 'payload';
+import cors from 'cors';
 
 require('dotenv').config();
 const app = express();
@@ -10,7 +11,11 @@ app.get('/', (_, res) => {
 });
 
 const start = async () => {
-  // Initialize Payload
+  app.use(cors({
+    origin: 'http://localhost:3000',  
+    credentials: true, 
+  }));
+
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
     mongoURL: process.env.MONGODB_URI,
@@ -20,7 +25,7 @@ const start = async () => {
     },
   })
 
-  // Add your own express routes here
+  app.use(payload.authenticate);
 
   app.listen(3000);
 }
