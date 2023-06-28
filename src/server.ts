@@ -12,7 +12,7 @@ app.get('/', (_, res) => {
 
 const start = async () => {
   app.use(cors({
-    origin: 'http://localhost:3000',  
+    origin: process.env.CMS_URL,  
     credentials: true, 
   }));
 
