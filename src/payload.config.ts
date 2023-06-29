@@ -11,13 +11,13 @@ export default buildConfig({
   },
   csrf: [ // whitelist of domains to allow cookie auth from
     'http://localhost:3000',
-    'https://pokedex-frontend-orpin.vercel.app/',
+    'https://pokedex-frontend-orpin.vercel.app',
     'https://pokedex-cms.payloadcms.app'
   ],
   cors: [
     'http://localhost:3000',
-    'https://pokedex-frontend-orpin.vercel.app/',
-    'https://pokedex-cms.payloadcms.app/'
+    'https://pokedex-frontend-orpin.vercel.app',
+    'https://pokedex-cms.payloadcms.app'
   ],
   collections: [
     Users,
