@@ -5,12 +5,7 @@ import type { CollectionConfig } from 'payload/types';
 
 const Users: CollectionConfig = {
   slug: 'users',
-  auth: {
-    cookies: {
-      sameSite: "none",
-      secure: false,
-    }
-  },
+  auth: true,
   admin: {
     useAsTitle: 'email',
   },
@@ -153,7 +148,5 @@ const Users: CollectionConfig = {
     }
   ],
 };
-
-
 
 export default Users;
