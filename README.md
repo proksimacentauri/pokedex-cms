@@ -11,6 +11,8 @@ To spin up the project locally, follow these steps:
 4. Now open `http://localhost:3000/admin` in your browser
 5. Create your first admin user using the form on the page
 
+in payload config you can whitelist which domains are whitelisted by csrf and cors as well.
+
 That's it! Changes made in `./src` will be reflected in your app.
 
 ## 🚀 Production
